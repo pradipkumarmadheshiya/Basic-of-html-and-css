@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards that fade</title>
+    <style>
+        #cards{
+            display: flex;
+            border: 1px solid rgb(178, 178, 178);
+            width: 85%;
+            margin: 100px 8%;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(178, 178, 178);
+            background-color: teal;
+            margin: 4%;
+            transition: 0.5s;
+        }
+        .card:hover{
+            opacity: 0.8;
+            background-color: #ff004f;
+        }
+        #cards:hover .card:not(:hover){
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="cards">
+        <div class="card">
+            <p>Card 1</p>
+        </div>
+        <div class="card">
+            <p>Card 2</p>
+        </div>
+        <div class="card">
+            <p>Card 3</p>
+        </div>
+        <div class="card">
+            <p>Card 4</p>
+        </div>
+    </div>
+</body>
+</html>
