@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai News</title>
+    <style>
+        *{
+            font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            background-color: #f2f6ff;
+            padding: 50px;
+        }
+        h1{
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        .news-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .news{
+            padding: 35px;
+            width: 340px;
+            background-color: #fff;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .image-div{
+            width: 340px;
+            height: 180px;
+        }
+        img{
+            border: 1px solid rgb(202, 202, 202);
+            border-radius: 8px;
+            width: 340px;
+            height: 180px
+        }
+        .description{
+            width: 350px;
+            background-color: white;
+        }
+        h4,h5,p{
+            background-color: white;
+        }
+        h4{
+            margin-top: 30px;
+            color: #3470e4;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        h5{
+            font-size: 17px;
+            margin-top: 10px;
+            font-weight: 650;
+        }
+        p{
+            color: rgb(95, 95, 95);
+            margin-top: 15px;
+            font-size: 17px;
+        }
+        .button{
+            display: block;
+            width: fit-content;
+            margin: auto;
+            text-decoration: none;
+            border: 1px solid red;
+            color: red;
+            padding: 12px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 40px;
+        }
+        .button:hover{
+            background-color: rgb(255, 224, 224);
+        }
+        .investors-box{
+            padding: 50px;
+        }
+        .investors-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .investor{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masai in News</h1>
+        <div class="news-list">
+            <div class="news">
+                <div class="image-div">
+                    <a href="https://www.moneycontrol.com/news/business/kunal-shah-vijay-shekhar-sharma-amrish-rau-among-21-angel-investors-in-masai-school-7628231.html"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/money_Control_c3e25f5ceb.png" alt="moneycontrol"></a>
+                </div>
+                <div class="description">
+                    <h4>26 Oct 2021</h4>
+                    <h5>Kunal Shah, Vijay Shankar Sharma, Amrish Rau among 21 angel investors in masai school</h5>
+                    <p>Masai School is aiming to expand to 20 smaller cities by march 2022 and exp...</p>
+                </div>
+            </div>
+            <div class="news">
+                <div class="image-div">
+                    <a href="https://economictimes.indiatimes.com/tech/startups/tech-skilling-startup-masai-school-acquires-data-analytics-firm-prepleaf-for-1-million/articleshow/88404992.cms"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="The Economic Times"></a>
+                </div>
+                <div class="description">
+                    <h4>21 Dec 2021</h4>
+                    <h5>Edtech startup Masai School acquires data analitics firm Prepleaf for $1 million </h5>
+                    <p>With their latest acquisition, Masai moves one step closer to becoming Indias's...</p>
+                </div>
+            </div>
+            <div class="news">
+                <div class="image-div">
+                    <a href="https://www.vccircle.com/unitus-ventures-leads-pre-series-a-funding-for-coding-focussed-masai-school"><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vccircle_6ef779c958.png" alt="VCCiRCLE"></a>
+                </div>
+                <div class="description">
+                    <h4>18 Aug 2020</h4>
+                    <h5>Unitus Ventures leads pre-Series A funding for coding-focussed Masai School</h5>
+                    <p>Software coding platform Masai School has raised $2.5 million (RS 18.6 crore)...</p>
+                </div>
+            </div>
+        </div>
+        <a class="button"  href="https://www.masaischool.com/media">SEE MORE > </a>
+    </div>
+    <div class="investors-box">
+        <h1>Our Investors (Who believed in us)</h1>
+        <div class="investors-list">
+            <div class="investor">
+                <img src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg" alt="IndiaQuotient">
+            </div>
+            <div class="investor">
+                <img src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg" alt="ON">
+            </div>
+            <div class="investor">
+                <img src="https://www.masaischool.com/images/our-investors/capria-logo.svg" alt="CAPRIA">
+            </div>
+        </div>
+        <a class="button" href="https://www.masaischool.com/our-investors">SEE MORE INVESTORS ></a>
+    </div>
+</body>
+</html>
