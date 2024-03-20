@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 500px;
+            background-color: rgb(255, 111, 111);
+            display: grid;
+            gap: 40px 20px;
+            padding: 20px;
+            margin: auto;
+            grid-template-areas: 
+            "one two three"
+            "one four five"
+            "six seven seven";
+            grid-template-rows: repeat(2,1fr) 0.5fr;
+        }
+        .container>div{
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one{
+            background-color: aqua;
+            grid-area: one;
+        }
+        .two{
+            background-color: aquamarine;
+            grid-area: two;
+        }
+        .three{
+            background-color: rgb(187, 187, 255);
+            grid-area: three;
+        }
+        .four{
+            background-color: rgb(255, 162, 162);
+            grid-area: four;
+        }
+        .five{
+            background-color: burlywood;
+            grid-area: five;
+        }
+        .six{
+            background-color: cadetblue;
+            grid-area: six;
+        }
+        .seven{
+            grid-area: seven;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven" style="border: none;"></div>
+    </div>
+</body>
+</html>
