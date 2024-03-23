@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            padding: 50px;
+            display: grid;
+            grid-template-areas: 
+            "logo logo shop sell about shop2"
+            "footer footer footer footer footer footer";
+        }
+        .logo{
+            grid-area: logo;
+            padding: 50px 0;
+            background-color: #02026f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shop{
+            grid-area: shop;
+            padding: 0 0 30px 30px;
+
+        }
+        .sell{
+            grid-area: sell;
+        }
+        .about{
+            grid-area: about;
+        }
+        .shop2{
+            grid-area: shop2;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: #222222;
+            display: flex;
+            align-items: center;
+            word-spacing: 4px;
+        }
+        .shop,.sell,.about,.shop2{
+            background-color: #3140af;
+        }
+        .logo img{
+            width: 50%;
+            height: 14vw;
+        }
+        .footer img{
+            border-radius: 50%;
+            width: 4%;
+            margin: 10px;
+        }
+        .footer>div{
+            display: flex;
+        }
+        .footer>div+div{
+            width: 140%;
+            justify-content: end;
+        }
+        .footer a{
+            padding: 30px 10px;
+            font-size: 12px;
+        }
+        .footer div p{
+            margin: auto 0;
+            font-size: 12px;
+        }
+        h3,p{
+            margin-top: 15px;
+        }
+        p{
+            font-size: 14px;
+        }
+        @media screen and (min-width:720px) and (max-width:1080px){
+            .container{
+                grid-template-areas: 
+                "shop sell about shop2"
+                "logo logo logo logo"
+                "footer footer footer footer";
+            }
+            .logo img{
+                width: 20%;
+            }
+            .footer img{
+                display: none;
+            }
+            .footer img+p{
+                display: none;
+            }
+        }
+        @media screen and (max-width:719px) {
+            .container{
+                grid-template-areas: 
+                "shop"
+                "sell"
+                "about"
+                "shop2"
+                "logo"
+                "footer";
+            }
+            .footer img{
+                display: none;
+            }
+            .footer img+p{
+                display: none;
+            }
+            .footer div p{
+                font-size: 10px;
+            }
+            .footer a{
+                padding: 25px 4px;
+                font-size: 10px;
+            }
+            .footer{
+                word-spacing: 2px;
+            }
+            .logo img{
+                width: 15%;
+            }
+            .logo{
+                padding: 25px 0;
+            }
+            .container{
+                padding: 0;
+            }
+            .shop p{
+                display: none;
+            }
+            .sell p{
+                display: none;
+            }
+            .about p{
+                display: none;
+            }
+            .shop2 p{
+                display: none;
+            }
+            .footer>div+div{
+                justify-content: center;
+            }
+            .shop{
+                padding-bottom: 0;
+            }
+            .sell{
+                padding-left: 30px;
+            }
+            .about{
+                padding-left: 30px;
+            }
+            .shop2{
+                padding: 0 0 20px 30px;
+            }
+            h3{
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="logo">
+                <img src="https://i.pinimg.com/474x/4d/3a/94/4d3a944ba6944eeb1b441ca9f2d7d6a4.jpg" alt="">
+            </div>
+            <div class="shop">
+                <h3>Shop</h3>
+                <p>Gift cards</p>
+                <p>Etsy Registry</p>
+                <p>Sitemap</p>
+                <p>Etsy blog</p>
+                <p>Etsy United Kingdom</p>
+                <p>Etsy Germany</p>
+                <p>Etsy Canada</p>
+            </div>
+            <div class="sell">
+                <h3>Sell</h3>
+                <p>Sell on Etsy</p>
+                <p>Teams</p>
+                <p>Forums</p>
+                <p>Affiliates % Creaters</p>
+            </div>
+            <div class="about">
+                <h3>About</h3>
+                <p>Etsy. Inc.</p>
+                <p>Policies</p>
+                <p>Investors</p>
+                <p>Careers</p>
+                <p>Press</p>
+                <p>Impact</p>
+                <p>Legal Imprint</p>
+            </div>
+            <div class="shop2">
+                <h3>Shop</h3>
+                <p>Gift cards</p>
+                <p>Etsy Registry</p>
+                <p>Sitemap</p>
+                <p>Etsy blog</p>
+                <p>Etsy United Kingdom</p>
+                <p>Etsy Germany</p>
+                <p>Etsy Canada</p>
+            </div>
+            <div class="footer">
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/800px-Flag_of_India.png" alt="flag">
+                    <p>India | English(IN) | ₹(INR)</p>
+                </div>
+                <div>
+                    <p>© 2024 Etsy. Inc. </p>
+                    <a href="">Terms of use</a>
+                    <a href="">Privacy</a>
+                    <a href="">Interest-based ads</a>
+                    <a href="">Locul Shops</a>
+                    <a href="">regions</a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
