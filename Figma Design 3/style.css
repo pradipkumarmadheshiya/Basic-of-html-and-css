@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    font-family: inter;
+    margin: 0;
+    padding: 0;
+}
+#header{
+    background: url(https://s3-alpha-sig.figma.com/img/e4e9/4bcd/6013879f33e24c0450bcde15d215f8ae?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QuDutdYXQRMfxTOjHO1J1pyZ8MGiPtRFFL2TkCpO2zq-62K50LHSW02KwyYtdcgkocbh6jOFaavtM4BkMHX183vNCyP0fwfIhcAV-mp2JI4s1aVGPmIUIPYRrzRTO7noBqze9dP1tRv5o2N0gUAzV81eUCywe5arcKPiwCVT33A98KCPF6j6QI1H24i-cfXwvTwP5cB4pn6HHDaUNq4JQvgR8eKIaiuiKLmU9nSkWZt-UguuD1q6SPXQTOk3P2adigj9X6grYSrG-m3J2U1rr5o~J5WV4FOj-SYPvuKRNul8D2ogvlVIAGxlEGBv1wokQvsKeNnkSQi-h0qtpl1Tiw__);
+    background-position: center;
+    height: 860px;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    align-items: center;
+}
+.nav-option{
+    display: flex;
+    gap: 20px;
+}
+.nav-option>p{
+    font-size: 14.77px;
+    font-weight: 400;
+}
+.nav-option>p:first-child{
+    color: #EB662B;
+}
+.login{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.login p{
+    font-size: 14.77px;
+    font-weight: 400;
+}
+.login>p:last-child{
+    border: 1px solid black;
+    padding: 8px 13px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+#header h1{
+    margin: auto;
+    margin-top: 90px;
+    font-weight: 600;
+    font-size: 45px;
+    max-width: 664px;
+    text-align: center;
+    background: linear-gradient(to right, #EE8C61, #4C43C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.search-form{
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 30px;
+    background-color: white;
+    padding: 7px 10px;
+    border-radius: 30px;
+}
+.sub-search{
+    display: flex;
+}
+.search-form .search-circle{
+    background-color: #fef8f5;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}.sub-search-last{
+    background-color: #eb662b;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.search-detail{
+    margin-left: 10px;
+}
+.search-detail h6{
+    font-size: 14.88;
+    font-weight: 500;
+    margin-top: 7px;
+}
+.search-detail p{
+    color: #717171;
+    font-size: 13.67px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.search-detail .search-detail-month{
+    color: #000;
+    font-size: 13.34px;
+}
+/* --------------popular things--------------- */
