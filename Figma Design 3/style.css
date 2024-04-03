@@ -49,7 +49,7 @@ nav{
     max-width: 664px;
     text-align: center;
     background: linear-gradient(to right, #EE8C61, #4C43C4);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .search-form{
@@ -95,3 +95,72 @@ nav{
     font-size: 13.34px;
 }
 /* --------------popular things--------------- */
+#popular-things{
+    margin: 70px 70px 0 70px;
+}
+.popular-things-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.sub-title{
+    font-size: 29.88px;
+    font-weight: 700;
+    color: #05073C;
+}
+.popular-things-heading p{
+    color: #05073C;
+    font-size: 14.3px;
+    font-weight: 400;
+}
+.box{
+    margin-top: 40px;
+    gap: 30px;
+    display: grid;
+    grid-template-areas: 
+    "image1 image2 image3 image3"
+    "image1 image4 image5 image6";
+}
+.image1{
+    grid-area: image1;
+}
+.image2{
+    grid-area: image2;
+}
+.image3{
+    grid-area: image3;
+}
+.image4{
+    grid-area: image4;
+}
+.image5{
+    grid-area: image5;
+}
+.image6{
+    grid-area: image6;
+}
+.sub-box>div>img{
+    width: 100%;
+    height: 100%;
+}
+/* --------------tourz------------------ */
+#tourz{
+    padding: 70px;
+}
+#tourz .box{
+    display: flex;
+}
+#tourz img{
+    width: 60px;
+}
+#tourz h6{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 17.72px;
+    color: #05073C;
+}
+#tourz p{
+    margin-top: 10px;
+    font-size: 14.53px;
+    font-weight: 400;
+    color: #05073C;
+}
