@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reebok</title>
+    <script src="https://kit.fontawesome.com/3847ae3c9c.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            border: 4px solid #3a3a3a;
+            border-bottom-width: 2px;
+            border-radius: 7px;
+        }
+        #nav1{
+            background-color: #252525;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .brands a{
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+        .options>img{
+            width: 50px;
+            height: 50px;
+        }
+        .options>div>a{
+            color: #cecece;
+        }
+        .options{
+            display: flex;
+            gap: 20px;
+        }
+        .options>div{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .options>div>.option{
+            font-size: 14px;
+            color: white;
+        }
+        .options i{
+            font-size: 25px;
+        }
+        .options .line{
+            font-size: 25px;
+            opacity: 0.3;
+        }
+        #nav2{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 40px;
+            padding: 20px;
+            align-items: center;
+        }
+        .nav2-option a{
+            margin-right: 15px;
+            text-decoration: none;
+            color: rgb(46, 46, 46);
+            font-weight: 501;
+            font-size: 15px;
+        }
+        .nav2-option a:hover{
+            color: rgb(214, 0, 0);
+        }
+        .logo img{
+            width: 200px;
+        }
+        .logo-option{
+            display: flex;
+            gap: 40px;
+        }
+        .delivery{
+            display: flex;
+            width: 245px;
+            background-color: #c40c2f;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 30px;
+            align-items: center;
+            gap: 10px;
+        }
+        .delivery h4{
+            font-size: 14px;
+        }
+        .delivery p{
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .search-box{
+            display: flex;
+            gap: 25px;
+        }
+        .search-box a{
+            text-decoration: none;
+        }
+        .search{
+            border-bottom: 1px solid;
+        }
+        .search i{
+            margin-right: 10px;
+            font-size: 20px;
+            color: #3a3a3a;
+        }
+        .container{
+            margin: 0 40px 20px 40px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            position: relative;
+        }
+        .container a{
+            text-decoration: none;
+        }
+        .message{
+            background-color: black;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+        }
+        .message i{
+            color: white;
+            font-size: 30px;
+        }
+        .image-div{
+            position: relative;
+        }
+        .image-div div{
+            position: absolute;
+            display: flex;
+            top: 10px;
+            gap: 130px;
+        }
+        .image-div img{
+            max-width: 280px;
+            max-height: 420px;
+        }
+        .image-div div p{
+            color: white;
+            background: linear-gradient(to right, #3cc78f, #2ea5db);
+            font-size: 14px;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .image-div div i{
+            color: black;
+            font-size: 20px;
+            opacity: 70%;
+        }
+        .item-name>div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .item-name>div>p{
+            color: #4f5f74;
+            font-size: 12px;
+        }
+        .item-name>div>i{
+            color: black;
+        }
+        .box>p{
+            color: #4f5f74;
+            margin-top: 8px;
+        }
+        .box>h4{
+            margin-top: 10px;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav1">
+            <div class="brands">
+                <a href="">MORE BRANDS <i class="fa-solid fa-angle-down"></i></a>
+            </div>
+            <div class="options">
+                <div>
+                    <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                    <a class="option" href="">STORES</a>
+                    <a class="line" href="">|</a>
+                    <a href=""><i class="fa-solid fa-circle-info"></i></a>
+                    <a class="option" href="">CONTACT US</a>
+                    <a class="line" href="">|</a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <a class="option" href="">LOG IN</a>
+                    <a class="line" href="">|</a>
+                    <a href=""><i class="fa-regular fa-heart"></i></a>
+                    <a class="line" href="">|</a>
+                    <a href=""><i class="fa-solid fa-briefcase"></i></a>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJNwYtHfMvhSTDRCBpPNnD4CvjbQUU4bIMqZUjLr9vIA&s" alt="">
+            </div>
+        </nav>
+        <nav id="nav2">
+            <div class="logo-option">
+                <div class="logo">
+                    <a href=""><img src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/header_brand_logo_RBK.png?q=75&auto=format" alt=""></a>
+                </div>
+                <div class="nav2-option">
+                    <a href="">NEW</a>
+                    <a href="">MEN</a>
+                    <a href="">WOMAN</a>
+                    <a href="">ICONS</a>
+                    <a href="">SPORTS</a>
+                    <a href="">CLASSICS</a>
+                    <a href="">SALE</a>
+                </div>
+            </div>
+            <div class="search-box">
+                <div class="search">
+                    <p><i class="fa-solid fa-magnifying-glass"></i> Search Here</p>
+                </div>
+                <a href=""><div class="delivery">
+                    <i><i class="fa-solid fa-truck"></i></i>
+                    <div>
+                        <h4>EXPRESS DELIVERY</h4>
+                        <p>Select your nearest store <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
+                </div></a>
+            </div>
+        </nav>
+        <div class="container">
+            <a href=""><div class="box">
+                <div class="image-div">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39623058-12790558.jpg?q=75&auto=format&w=387" alt="">
+                    <div>
+                        <p>I AM THE NEW</p>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="item-name">
+                    <div>
+                        <p>RUNNING SHOES</p>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+                </div>
+                <p>Reebok Unisex Energen Tech Plus</p>
+                <h4>₹ 8,599</h4>
+            </div></a>
+            <a href=""><div class="box">
+                <div class="image-div">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39623127-12792205.jpg?q=75&auto=format&w=387" alt="">
+                    <div>
+                        <p>I AM THE NEW</p>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="item-name">
+                    <div>
+                        <p>RUNNING SHOES</p>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+                </div>
+                <p>Reebok Mens True Court</p>
+                <h4>₹ 5,999</h4>
+            </div></a>
+            <a href=""><div class="box">
+                <div class="image-div">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39620252-12677371.jpg?q=75&auto=format&w=387" alt="">
+                    <div>
+                        <p>I AM THE NEW</p>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="item-name">
+                    <div>
+                        <p>TRAINING SHOES</p>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+                </div>
+                <p>Reebok Mens Flexagon Force 4</p>
+                <h4>₹ 6,999</h4>
+            </div></a>
+            <a href=""><div class="box">
+                <div class="image-div">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39623061-12790585.jpg?q=75&auto=format&w=387" alt="">
+                    <div>
+                        <p>I AM THE NEW</p>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="item-name">
+                    <div>
+                        <p>RUNNING SHOES</p>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+                </div>
+                <p>Reebok Womens Energen Tech</p>
+                <h4>₹ 6,599</h4>
+            </div></a>
+            <div class="message">
+                <i class="fa-solid fa-message"></i>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
