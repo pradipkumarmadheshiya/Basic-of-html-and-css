@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+.investors-list{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 7px;
+}
+.box>div+div{
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.box>div+div>img{
+    width: 150px;
+    margin-top: 5px;
+}
+h3{
+    margin-top: 5px;
+}
+p{
+    margin-top: 10px;
+}
