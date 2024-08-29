@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: green;
+        }
+        thead th{
+            width: 200px;
+            text-align: left;
+            padding: 5px;
+            border: 1px solid rgb(211, 211, 211);
+            color: white;
+        }
+        tbody{
+            border: 1px solid gray;
+        }
+        tbody td{
+            padding: 5px;  
+            border: 1px solid rgb(211, 211, 211);
+        }
+        #sum{
+            background-color: rgb(191, 191, 191);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price per Unit</th>
+                    <th>Description</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product 1</td>
+                    <td>2</td>
+                    <td>$10</td>
+                    <td>This is product 1</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Product 2</td>
+                    <td>3</td>
+                    <td>$20</td>
+                    <td>This is product 2</td>
+                    <td>$60</td>
+                </tr>
+                <tr>
+                    <td>Product 3</td>
+                    <td>4</td>
+                    <td>$30</td>
+                    <td>This is product 3</td>
+                    <td>$120</td>
+                </tr>
+                <tr id="sum">
+                    <td>sum</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>$200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
