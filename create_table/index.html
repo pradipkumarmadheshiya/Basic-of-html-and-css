@@ -29,6 +29,10 @@
             background-color: rgb(191, 191, 191);
             font-weight: 600;
         }
+        tfoot td{
+            padding: 5px;
+            border: 1px solid rgb(211, 211, 211);
+        }
     </style>
 </head>
 <body>
@@ -65,14 +69,13 @@
                     <td>This is product 3</td>
                     <td>$120</td>
                 </tr>
+            </tbody>
+            <tfoot>
                 <tr id="sum">
-                    <td>sum</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="4">sum</td>
                     <td>$200</td>
                 </tr>
-            </tbody>
+            </tfoot>
         </table>
     </div>
 </body>
