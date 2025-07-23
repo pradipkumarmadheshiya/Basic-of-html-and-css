@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 20px;
+            gap: 10px;
+        }
+        .card{
+            background-color: rgb(238, 238, 238);
+        }
+        img{
+            width: 100%;
+        }
+        @media (max-width:720px) {
+            .box{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width:480px) {
+            .box{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltM-fVred1jogWYBsNYf2FsG8VxpJbbYAZFw8P6SPd8ze6FP2uiVp9yc&s" alt="">
+            <h3>Monkey</h3>
+            <p>Monkey is a clever animal and looks cute but sometime they irritate alot.</p>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltM-fVred1jogWYBsNYf2FsG8VxpJbbYAZFw8P6SPd8ze6FP2uiVp9yc&s" alt="">
+            <h3>Monkey</h3>
+            <p>Monkey is a clever animal and looks cute but sometime they irritate alot.</p>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltM-fVred1jogWYBsNYf2FsG8VxpJbbYAZFw8P6SPd8ze6FP2uiVp9yc&s" alt="">
+            <h3>Monkey</h3>
+            <p>Monkey is a clever animal and looks cute but sometime they irritate alot.</p>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltM-fVred1jogWYBsNYf2FsG8VxpJbbYAZFw8P6SPd8ze6FP2uiVp9yc&s" alt="">
+            <h3>Monkey</h3>
+            <p>Monkey is a clever animal and looks cute but sometime they irritate alot.</p>
+        </div>
+    </div>
+</body>
+</html>
