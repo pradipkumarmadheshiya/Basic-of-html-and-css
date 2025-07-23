@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block{
+            border: 2px solid black;
+            width: 100%;
+        }
+        #inline{
+            background-color: green;
+        }
+        #inline-block{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+        }
+        #none{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="block">block property</p>
+    <span id="inline">inline property</span>
+    <div id="inline-block">inline-block property</div>
+    <p id="none">none</p>
+    <button id="button">Button</button>
+    <script>
+        const button=document.getElementById("button")
+        const none=document.getElementById("none")
+        let isVisible=true
+        button.addEventListener("click", ()=>{
+            if(isVisible){
+                none.style.display="none"
+                isVisible=false
+            }
+            else{
+                none.style.display="block"
+                isVisible=true
+            }
+        })
+    </script>
+</body>
+</html>
