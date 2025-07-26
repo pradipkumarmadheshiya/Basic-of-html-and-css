@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const obj= [{ name: "Laptop", price: 1000 }, { name: "Mouse", price: 20 }]
+
+        function processProducts(){
+            const newObj=obj.map((val)=>val.name)
+            
+            obj.forEach((val)=>{
+                if(val.price>50){
+                    console.log(val.name, "is above $50")
+                }
+                else{
+                    console.log(val.name, "is below $50")
+                }
+            })
+        }
+        processProducts()
+
+    </script>
+</body>
+</html>
