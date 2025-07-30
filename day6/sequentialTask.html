@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function startTask(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve("Task A Completed")
+                }, 1000)
+            })
+        }
+        
+        function processTask(taskAresult){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(`Task B processed: ${taskAresult}`)
+                }, 1500)
+            })
+        }
+
+        function finalizeTask(taskBresult){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(`Final result: ${taskBresult}`)
+                }, 500)
+            })
+        }
+
+        startTask()
+        .then((resultA)=>{
+            console.log(resultA)
+            return processTask(resultA)
+        })
+        .then((resultB)=>{
+            console.log(resultB)
+            return finalizeTask(resultB)
+        })
+        .then((resultC)=>{
+            console.log(resultC)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    </script>
+</body>
+</html>
