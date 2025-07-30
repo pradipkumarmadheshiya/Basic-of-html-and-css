@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        h2{
+            margin: 60px;
+
+        }
+        img{
+            width: 100%;
+        }
+        .box{
+            margin: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .card{
+            border: 1px solid rgb(206, 206, 206);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        @media (max-width:720px) {
+            .box{
+                margin: 20px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>All Products</h2>
+        <div class="box">
+        </div>
+    </div>
+
+    <script>
+        const box=document.getElementsByClassName("box")[0]
+        
+        async function fetchData(){
+            try{
+                const res=await fetch("https://fakestoreapi.com/products")
+                const data=await res.json()
+                console.log(data)
+                displayData(data)
+            }
+            catch(err){
+                console.log("Failed. err->", err)
+            }
+        }
+        fetchData()
+
+        function displayData(data){
+            data.forEach(element => {
+                const card=document.createElement("div")
+                card.className="card"
+                const image=document.createElement("img")
+                const title=document.createElement("p")
+                const price=document.createElement("p")
+                const button=document.createElement("button")
+
+                image.src=element.image
+                title.innerText=element.title
+                price.innerText="₹"+element.price
+                button.innerText="View Details"
+
+                card.append(image, title, price, button)
+                box.append(card)
+            });
+
+            const totalPrice=data.reduce((acc, element)=>acc+element.price ,0)
+            console.log("totalPrice", totalPrice.toFixed(2))
+        }
+    </script>
+</body>
+</html>
