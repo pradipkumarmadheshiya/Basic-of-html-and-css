@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">
+            Hello world
+        </h1>
+        <p>Welcome to the web world</p>
+        <p>This this the welcome page</p>
+        <p>You are learning dom here</p>
+    </div>
+</body>
+</html>
+<script>
+    const heading=document.getElementById("heading")
+    heading.innerText="Welcome to the DOM World!"
+
+    const paras=document.getElementsByTagName("p")
+    Array.from(paras).forEach((para)=>{
+        para.style.color="blue"
+    })
+
+    const container=document.querySelector("div")
+
+    container.style.backgroundColor="yellow"
+</script>
