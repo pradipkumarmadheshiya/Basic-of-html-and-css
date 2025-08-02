@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <button>Add Item</button>
+    </div>
+</body>
+</html>
+<script>
+    const ul=document.querySelector("ul")
+    const button=document.querySelector("button")
+
+    let sequence=0
+    button.addEventListener("click", ()=>{
+        const li=document.createElement("li")
+        li.innerHTML="<li>New item</li>"
+        if(sequence%2===0){
+            li.style.fontWeight="bold"
+            li.style.color="blue"
+        }
+        else{
+            li.style.fontStyle="italic"
+            li.style.color="red"
+        }
+        sequence++
+        ul.appendChild(li)
+    })
+</script>
