@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 12px;
+        }
+        ul div{
+            display: flex;
+            gap: 30px;
+            margin-top: 12px;
+        }
+        .completed{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div>
+            <input type="text" name="todo" id="todoInp" placeholder="Write your task">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <div class="box">
+            <ul id="unorderedList">
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const todoInp=document.getElementById("todoInp")
+    const addTaskBtn=document.getElementById("addTaskBtn")
+    const unorderedList=document.getElementById("unorderedList")
+
+    addTaskBtn.addEventListener("click", ()=>{
+        if(todoInp.value.trim()===""){
+            alert("Please Enter your task")
+            return
+        }
+        const div=document.createElement("div")
+        const checkBox=document.createElement("input")
+        checkBox.type="checkbox"
+        const li=document.createElement("li")
+        const deleteButton=document.createElement("button")
+        deleteButton.innerText="Delete"
+        li.innerText=todoInp.value
+        div.append(checkBox, li, deleteButton)
+        unorderedList.appendChild(div)
+        todoInp.value=''
+
+        checkBox.addEventListener("click", ()=>{
+            if(checkBox.checked){
+               li.className="completed"
+            }
+            else{
+                li.className=""
+            }
+        })
+
+        deleteButton.addEventListener("click", ()=>{
+            div.remove()
+        })
+    })
+</script>
