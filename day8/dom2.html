@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" name="color" id="color" placeholder="Enter color name">
+        <br><br>
+        <input type="text" name="text-content" id="text-content" placeholder="Write something here">
+        <br><br>
+        <div class="content-box">
+            <p class="content">User will write something here.</p>
+        </div>
+        <button id="bgBtn" type="button">Change Background</button>
+        <button id="textBtn" type="button">Update Text</button>
+    </div>
+</body>
+</html>
+<script>
+    const contentBox=document.getElementsByClassName("content-box")[0]
+    const content=document.getElementsByClassName("content")[0]
+    const colorInp=document.getElementById("color")
+    const textContent=document.getElementById("text-content")
+
+    const bgBtn=document.getElementById("bgBtn")
+    const textBtn=document.getElementById("textBtn")
+
+    const colors = [
+        "black", "white", "red", "green", "blue", "yellow", "orange", "purple",
+        "pink", "brown", "gray", "cyan", "magenta", "lime", "maroon", "navy",
+        "olive", "teal", "aqua", "silver", "gold", "indigo", "violet", "beige",
+        "coral", "crimson", "darkblue", "darkgreen", "darkred", "darkorange",
+        "dodgerblue", "forestgreen", "fuchsia", "hotpink", "khaki", "lavender",
+        "lightblue", "lightgreen", "orangered", "royalblue"
+    ];
+    bgBtn.addEventListener("click", ()=>{
+        const bgColor=colorInp.value.trim().toLowerCase()
+        if(bgColor==="" || !colors.includes(bgColor)){
+            alert("Enter valid color name.")
+            return
+        }
+        contentBox.style.backgroundColor=bgColor
+        colorInp.value=""
+    })
+
+    textBtn.addEventListener("click", ()=>{
+        const texts=textContent.value.trim()
+        if(texts===""){
+            alert("Please enter texts.")
+            return
+        }
+        content.innerText=texts
+        textContent.value=""
+    })
+</script>
