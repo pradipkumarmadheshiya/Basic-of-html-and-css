@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App(){
+            const [page, setPage]=React.useState("home")
+
+            function Navbar(){
+                if(page==="home"){
+                    return <h2 style={{backgroundColor:"gray"}}>Welcome to Home Page</h2>
+                }
+                else if(page==="about"){
+                    return <h2 style={{backgroundColor:"gray"}}>About Us</h2>
+                }
+                else if(page==="contact"){
+                    return <h2 style={{backgroundColor:"gray"}}>Contact Us</h2>
+                }
+                
+            }
+            return(
+                <>
+                <nav>
+                    <button onClick={()=>setPage("home")}>Home</button>
+                    <button onClick={()=>setPage("about")}>About</button>
+                    <button onClick={()=>setPage("contact")}>Contact</button>
+                </nav>
+                <Navbar/>
+                </>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<App/>)
+    </script>
+</body>
+</html>
