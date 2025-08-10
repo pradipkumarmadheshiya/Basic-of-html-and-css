@@ -28,7 +28,7 @@
             },[])
 
             function handleFilter(){
-                const filteredUser=userData.filter((item)=>item.name.toLowerCase()===user.toLowerCase())
+                const filteredUser=userData.filter((item)=>item.name.toLowerCase().includes(user.toLowerCase()))
                 setUserData(filteredUser)
             }
 
