@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App(){
+            const [quote, setQuote]=React.useState(null)
+            const [loading, setLoading]=React.useState(false)
+            function fetchQuote(){
+                setLoading(true)
+                fetch("http://api.quotable.io/random")
+                .then(res=>res.json())
+                .then(data=>setQuote(data))
+                .catch(error=>console.log("err:", error))
+                .finally(()=>setLoading(false))
+            }
+
+            React.useEffect(()=>{
+                fetchQuote()
+                const interval=setInterval(()=>{
+                    fetchQuote()
+                }, 30000)
+                return ()=>clearInterval(interval)
+            }, [])
+            return(
+                <div>
+                    <h2>Daily Quote</h2>
+                    <h4>Author: {quote?.author || <img height="16px" src="loading.svg"/>}</h4>
+                    <p>Content: {quote?.content || <img height="16px" src="loading.svg"/>}</p>
+                    <button onClick={fetchQuote}>{!loading? "Change Quote" : <span>Loading<img height="16px" src="loading.svg"/></span>}</button>
+                </div>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+    </script>
+</body>
+</html>
