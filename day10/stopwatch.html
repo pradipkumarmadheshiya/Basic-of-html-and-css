@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function App(){
+
+            const [time, setTime]=React.useState(0)
+            const intervalRef=React.useRef((null))
+            const [target, setTarget]=React.useState(10)
+            const [isRunning, setIsRunning]=React.useState(false)
+
+            function handleStart(){
+                setIsRunning(true)
+            }
+
+            function handleStop(){
+                setIsRunning(false)
+            }
+
+            function handleReset(){
+                setIsRunning(false)
+                setTime(0)
+            }
+
+            function playSound(){
+                const sound= new Audio("https://www.soundjay.com/button/beep-07.wav")
+                sound.play()
+            }
+
+            React.useEffect(()=>{
+                if(isRunning){
+                    intervalRef.current=setInterval(()=>{
+                        setTime(prev=>prev+1)
+                    }, 1000)
+
+                    return ()=>clearInterval(intervalRef.current)
+                }
+            }, [isRunning])
+
+            React.useEffect(()=>{
+                if(time===target){
+                    playSound()
+                    setIsRunning(false)
+                }
+            }, [time, target])
+
+            return (
+                <div>
+                    <h2>Stopwatch</h2>
+                    <h4>Timer: {time}</h4>
+                    <button onClick={handleStart}>Start</button>
+                    <button onClick={handleStop}>Stop</button>
+                    <button onClick={handleReset}>Reset</button>
+                    <h4>Set Target Time</h4>
+                    <input type="number" name="number" placeholder="Enter target value"
+                    value={target} onChange={(e)=>setTarget(Number(e.target.value))}
+                    />
+                </div>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+    </script>
+</body>
+</html>
